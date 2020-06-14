@@ -13,6 +13,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
 # Tabla de contenido
 - [Introducción](#Introducción)
     - [¿Qué es la Ciencia e Ingeniería de Datos?](#¿Qué-es-la-Ciencia-e-Ingeniería-de-Datos?)
+    - [Roles](#Roles)
 
 # Introducción
 
