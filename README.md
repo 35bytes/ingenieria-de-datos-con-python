@@ -19,6 +19,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Jupyter Notebooks](#Jupyter-Notebooks)
     - [Profundizando en tipos de datos](#Profundizando-en-tipos-de-datos)
     - [Fuentes de datos](#Fuentes-de-datos)
+    - [ETL](#ETL)
 
 # Introducción
 
@@ -270,3 +271,23 @@ Las **fuentes de datos** son el origen de donde podemos obtener la información 
 - **IoT:** Se ha vuelto una mina espectacular en los últimos años. Como automóviles.
 
 Existen muchas otras fuentes aun donde podemos obtener datos.
+
+## ETL
+
+**Extract:** Es el proceso de lectura de datos de diversas fuentes
+- Base de datos
+- CRM
+- Archivos CSV
+- Datasets públicos
+
+**Transform:** En este momento cuando nosotros tenemos que transformar los datos, tenemos que identificar datos faltantes o datos erróneos o una edad negativa. En esta etapa donde tenemos que identificar todos los problemas y solucionarlos.
+- Limpieza
+- Estructurado
+- Enriquecimiento.
+
+**Load:** Una vez transformados debemos insertarlos en el data warehouse
+- Depende del tipo de solución que se haya escogido
+
+<div align="center"> 
+  <img src="readme_img/etl-diagrama.png" width="80%">
+</div>
