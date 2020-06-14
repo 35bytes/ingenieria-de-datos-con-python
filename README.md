@@ -18,6 +18,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Comandos de Anaconda](#Comandos-de-Anaconda)
     - [Jupyter Notebooks](#Jupyter-Notebooks)
     - [Profundizando en tipos de datos](#Profundizando-en-tipos-de-datos)
+    - [Fuentes de datos](#Fuentes-de-datos)
 
 # Introducción
 
@@ -258,3 +259,14 @@ Los datos vienen en muchas formas y estas formas las podemos clasificar de difer
 <div align="center"> 
   <img src="readme_img/tipos-datos.webp" width="80%">
 </div>
+
+## Fuentes de datos
+
+Las **fuentes de datos** son el origen de donde podemos obtener la información para realizar nuestros proyectos. Estas fuentes pueden ser:
+
+- **Web:** Es una mina enorme con datos financieros, de startups, del clima, precipitación fluvial, astronómicos, de negocios, etc.
+- **APIs:** Endpoints que viven en la web y nos devuelven JSON. Por ejemplo, la API de twitter, google, facebook.
+- **User Analytics:** Son el comportamiento del usuario dentro de nuestra aplicaciones, algo similar a los que nos ofrece Google Analytics.
+- **IoT:** Se ha vuelto una mina espectacular en los últimos años. Como automóviles.
+
+Existen muchas otras fuentes aun donde podemos obtener datos.
