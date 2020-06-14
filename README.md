@@ -17,6 +17,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Instalación de Anaconda](#Instalación-de-Anaconda)
     - [Comandos de Anaconda](#Comandos-de-Anaconda)
     - [Jupyter Notebooks](#Jupyter-Notebooks)
+    - [Profundizando en tipos de datos](#Profundizando-en-tipos-de-datos)
 
 # Introducción
 
@@ -241,4 +242,19 @@ Con Jupyter Notebook podemos acceder a la paleta de comandos y los shortcuts que
 
 <div align="center"> 
   <img src="readme_img/comandos.png" width="80%">
+</div>
+
+## Profundizando en tipos de datos
+
+Los datos vienen en muchas formas y estas formas las podemos clasificar de diferentes maneras, permitiéndonos poder aplicar técnicas distintas a cada uno de los tipos de datos.
+
+- **Primitivos:** int, str, bool, float, hex, oct, datetime, objetos especiales.
+- **Estructurados:** Bases de datos, Data warehouses
+- **Semi estructurados:** json APIs, Datos tabulares (csv, excel)
+- **No estructurados:** HTML, Texto libre, Curriculum vitaes, Imágenes, audio, social media, Datos científicos
+- **Cualitativos vs cuantitativos**
+- **Tiempo real vs históricos**
+
+<div align="center"> 
+  <img src="readme_img/tipos-datos.webp" width="80%">
 </div>
