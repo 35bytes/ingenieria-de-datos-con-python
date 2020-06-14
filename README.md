@@ -33,3 +33,14 @@ Se apoya en la _Computer science_, Matemáticas (Regresiones e Inferencias), y t
 - Machine learning e Inteligencia Artificial.
 - Análisis de señales digitales.
 - Análisis de datos en la nube (Big Data).
+
+## Roles
+
+Existen por lo menos tres diferentes roles para tener un _pipeline_ completo de ciencia de datos. Este curso trata sobre el primer rol:
+
+- **Data engineer:** Se encarga de obtener los datos, limpiarlos y estructurarlos para posterior análisis, crear _pipelines_ de análisis automatizado, utilización de herramientas en la nube, análisis descriptivo de los datos.
+
+- **Data scientist:** Una vez tiene los datos se encarga de generar el análisis matemático de ellos, encontrar las relaciones entre las variables, las correlaciones, las causas y por último genera los modelos predictivos y prescriptivos.
+
+- **Machine Learning engineer:** Se encarga de llevar las predicciones a escala, de subirlos a la nube y allí generar muchas predicciones. Se encarga de mantener la calidad del modelo.
+
