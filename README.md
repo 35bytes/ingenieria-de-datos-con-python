@@ -16,6 +16,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Roles](#Roles)
     - [Instalación de Anaconda](#Instalación-de-Anaconda)
     - [Comandos de Anaconda](#Comandos-de-Anaconda)
+    - [Jupyter Notebooks](#Jupyter-Notebooks)
 
 # Introducción
 
@@ -174,3 +175,70 @@ Si deseamos **eliminar** un ambiente con todos sus paquetes ejecutamos el siguie
 ```
 conda remove --name nombre_ambiente --all
 ```
+
+## Jupyter Notebooks
+
+Algo interesante que tenemos con Anaconda es que nos trae Jupyter Notebooks.
+
+Jupyter Notebooks es un entorno de programación en el cual podemos mezclar ejecución de código en vivo, visualizaciones y añadir markdown.
+
+### Inicializar Jupyter Notebook
+
+Para inicializar un servidore de Juper Notebooks ejecutamos en consola:
+
+```
+jupyter notebook
+```
+
+Esto nos abrira una pantalla en nuestro navegador con la aplicación. Si no lo abre de forma automática puedes copiar la dirección url que te entrega la consola.
+
+<div align="center"> 
+  <img src="readme_img/jupyter-notebook.png" width="80%">
+</div>
+
+<div align="center"> 
+  <img src="readme_img/jupyter.png" width="80%">
+</div>
+
+### Crear Notebook
+
+Para crear un notebook simplemente vamos a navegar al directorio donde queramos guardar nuestro proyecto, y en **new** creamos nuestro proyecto en **Python 3.**
+
+<div align="center"> 
+  <img src="readme_img/crear-notebook.png" width="80%">
+</div>
+
+Se nos abrira una nueva pestaña con el nuevo _notebook_, y lo primero que haremos es cambiar su nombre en la parte superior.
+
+<div align="center"> 
+  <img src="readme_img/cambiar-nombre.gif" width="80%">
+</div>
+
+### Ejecutar código
+
+Para ejecutar el código que vamos escribiendo en nuestras celdas, simplemente tecleamos:
+
+- `shift + enter`: Para agregar una nueva celda al final.
+- `ctrl + enter`: Para solamente ejecutar la celda.
+
+### Navegar
+
+Para navegar por el notebook simplemente tecleamos `esc` y con ello el contorno de nuestra selección cambiara a azul. Ahora puedes hacer uso de las teclas de dirección arriba y abajo para navegar por el notebook.
+
+Si quieres volver a entrar al modo de escritura simplemente apretas `enter`.
+
+### Configuración tipo celda
+
+Para configurar el tipo de celda entramos al modo de navegación con `esc` y con la tecla:
+
+- `c`: La celda sera de tipo **código.** En este tipo escribiremos nuestro código para el proyecto.
+- `m`: La celda sera de tipo **markdown.** Aquí escribiremos los comentarios, cabeceras, etc.
+- `r`: La celda sera de tipo **Raw NBConvert.** Se utiliza para mantener código que no queremos ejecutar.
+
+### Paleta de comandos
+
+Con Jupyter Notebook podemos acceder a la paleta de comandos y los shortcuts que tiene. Para ello entramos al modo de navegación con `esc` y luego tecleamos `p`.
+
+<div align="center"> 
+  <img src="readme_img/comandos.png" width="80%">
+</div>
