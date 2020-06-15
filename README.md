@@ -24,6 +24,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Introducción a las tecnologías web](#Introducción-a-las-tecnologías-web)
     - [Realizar solicitudes HTTP con Python](#Realizar-solicitudes-HTTP-con-Python)
     - [¿Cómo trabajar con un documento HTML?](#¿Cómo-trabajar-con-un-documento-HTML?)
+    - [Solicitudes a la web: Requests](#Solicitudes-a-la-web:-Requests)
     - [Del scraping al crawling](#Del-scraping-al-crawling)
 
 # Introducción
@@ -391,14 +392,29 @@ soup = bs4.BeautifulSoup(response.text, 'html.parser')
 soup.select('body')
 ```
 
+## Solicitudes a la web: Requests
+
+Un buen **Data engineer** utiliza los conceptos de la ingeniería de software para poder desarrollar sus programa. En nuestro caso para poder desarrollar nos apoyaremos de un patrón.
+
+**Page Object Patter:** Es un patrón que consiste en esconder los queries especificos que se utilizan para manipular un documento HTML detrás de un objeto que representa la página web.
+
+Si estos queries se añaden directamente al código principal, el código se vuelve frágil y va a depender mucho de la modificación que hagan a la web otras personas y arreglarlo se vuelve muy complicado.
+
+```py
+class WebPage:
+    ...
+
+    @property
+    def page_header(self):
+    return soup.select(‘.some-query h1’)
+```
+
 ## Del scraping al crawling
 
 La diferencia entre scraping y crawling es relitivamente vaga.
 
 El web crawling permite crear programas que naveguen la web de manera autónoma.
 - Identifica los links, los guarda en una base de datos y crea un plan para continuar navegando
-
-Para poder desarrollar scrapers debemos entender los datos semi estructurados dados por el HTML para determinar qué tipo de selectores CSS necesitamos para sacar información.
 
 Consejos:
 - Piensa muy bien qué tipo de datos quieres recolectar
@@ -408,3 +424,5 @@ Consejos:
 - Si puedes, utiliza programación paralela
     - **from** requests **import** async
 - No te metas en problemas legales (robots.txt)
+
+
