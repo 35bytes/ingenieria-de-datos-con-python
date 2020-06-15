@@ -24,6 +24,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Introducción a las tecnologías web](#Introducción-a-las-tecnologías-web)
     - [Realizar solicitudes HTTP con Python](#Realizar-solicitudes-HTTP-con-Python)
     - [¿Cómo trabajar con un documento HTML?](#¿Cómo-trabajar-con-un-documento-HTML?)
+    - [Del scraping al crawling](#Del-scraping-al-crawling)
 
 # Introducción
 
@@ -389,3 +390,21 @@ Para manipular documentos HTML, en Python utilizamos BeautifulSoup
 soup = bs4.BeautifulSoup(response.text, 'html.parser')
 soup.select('body')
 ```
+
+## Del scraping al crawling
+
+La diferencia entre scraping y crawling es relitivamente vaga.
+
+El web crawling permite crear programas que naveguen la web de manera autónoma.
+- Identifica los links, los guarda en una base de datos y crea un plan para continuar navegando
+
+Para poder desarrollar scrapers debemos entender los datos semi estructurados dados por el HTML para determinar qué tipo de selectores CSS necesitamos para sacar información.
+
+Consejos:
+- Piensa muy bien qué tipo de datos quieres recolectar
+- Utiliza una base de datos para identificar vínculos que ya hayas visitado
+- Separa la parte del crawling (extracción de vínculos y generación de un plan de navegación) de la parte del scraping (extracción de información)
+- Incorpora un criterio para detener a tu crawler
+- Si puedes, utiliza programación paralela
+    - **from** requests **import** async
+- No te metas en problemas legales (robots.txt)
