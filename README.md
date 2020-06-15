@@ -23,6 +23,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
 - [Web scraping](#Web-scraping)
     - [Introducción a las tecnologías web](#Introducción-a-las-tecnologías-web)
     - [Realizar solicitudes HTTP con Python](#Realizar-solicitudes-HTTP-con-Python)
+    - [¿Cómo trabajar con un documento HTML?](#¿Cómo-trabajar-con-un-documento-HTML?)
 
 # Introducción
 
@@ -375,4 +376,16 @@ print(dir(response))
 
 # Y veremos todos sus métodos.
 ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+```
+
+## ¿Cómo trabajar con un documento HTML?
+
+Para manipular documentos HTML, en Python utilizamos BeautifulSoup
+- BeautifulSoup permite analizar gramaticalmente (“parsear”) el documento HTML para que lo podamos manipular programáticamente y podamos consultarlo
+- El documento se convierte en un árbol de nodos
+- Le realizamos consultas con selectores de CSS
+
+```py
+soup = bs4.BeautifulSoup(response.text, 'html.parser')
+soup.select('body')
 ```
