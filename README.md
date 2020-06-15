@@ -20,6 +20,9 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Profundizando en tipos de datos](#Profundizando-en-tipos-de-datos)
     - [Fuentes de datos](#Fuentes-de-datos)
     - [ETL](#ETL)
+- [Web scraping](#Web-scraping)
+    - [Introducción a las tecnologías web](#Introducción-a-las-tecnologías-web)
+    - [Realizar solicitudes HTTP con Python](#Realizar-solicitudes-HTTP-con-Python)
 
 # Introducción
 
@@ -291,3 +294,85 @@ Existen muchas otras fuentes aun donde podemos obtener datos.
 <div align="center"> 
   <img src="readme_img/etl-diagrama.png" width="80%">
 </div>
+
+# Web scraping
+
+## Introducción a las tecnologías web
+
+Las tecnologías web en principio podemos pensarlas como el internet, pero el internet es mucho más grande, es la red de redes, la forma en la que millones de computadores se conectan entre ellas para transferirse información.
+
+El internet también se compone de otros pedazos como telefonía(voip), mail(pop3, imap), compartir archivos(ftp). El internet es una red que une varias redes públicas, privadas, académicas, de negocios, de gobiernos, etc.
+
+La **web** específicamente es un espacio de información en el cual varios documentos(y otros recursos web) se pueden acceder a través de URLs y vínculos(links). La comunicación se da a través del protocolo **HTTP.**
+
+Elementos básicos de la web:
+
+- **HTML:** nos da la estructura de la información. Es un lenguaje para anotar pedazos de información para que el navegador o otros tipos de programa puedan interpretar que tipo de información se encuentra ahí.
+- **CSS:** nos permite darle colores, arreglar el texto y añadir diferentes elementos de presentación.
+- **Javascript:** nos permite añadir interactividad y cómputo a nuestra web.
+- **JSON:** Simplemente es una forma de transmitir datos entre servidores y clientes. Es la forma estándar en las que en la web y las aplicaciones se comunican con los servidores backend.
+
+## Realizar solicitudes HTTP con Python
+
+Para poder experimentar con la web necesitamos un método programático para solicitar URLs y obtener un HTML, y para esto existe en _Python_ la librería **requests**, el cual nos permitira generar solicitudes a la web dentro de _Python_ y utilizar los diferentes verbos HTTP. Normalmente utilizaremos el método **GET** porque vamos a traer datos.
+
+Para realizar una solicitud utilizaremos el método `requests.get('url')` y nos devolverá un objeto response.
+
+Todas las solicitudes HTTP tienen metadatos para que los diferentes sistemas y computadoras puedan entender de qué va la solicitud.
+
+Este ejercicio lo puedes realizar dentro de _Jupyter Notebook_.
+
+```py
+# Importamos la librería requests
+import requests
+
+# Realizamos una petición GET a la URL definida, y el objeto
+# requests con la respuesta la guardamos en nuestra variable response.
+response = requests.get('https://platzi.com')
+```
+
+```py
+# Con el siguiente comando veremos la documentación del objeto en response.
+response?
+
+# Y se desplegara la información
+Type:        Response
+String form: <Response [200]>
+File:        /opt/anaconda3/envs/platzi_data/lib/python3.8/site-packages/requests/models.py
+Docstring:  
+The :class:`Response <Response>` object, which contains a
+server's response to an HTTP request.
+```
+
+```py
+# Si queremos ver como esta implementado el objeto response dentro de Python.
+response?? 
+
+# Se desplegara la información de la clase y sus métodos.
+Type:        Response
+String form: <Response [200]>
+File:        /opt/anaconda3/envs/platzi_data/lib/python3.8/site-packages/requests/models.py
+Source:     
+class Response(object):
+    """The :class:`Response <Response>` object, which contains a
+    server's response to an HTTP request.
+    """
+
+    __attrs__ = [
+        '_content', 'status_code', 'headers', 'url', 'history',
+        'encoding', 'reason', 'cookies', 'elapsed', 'request'
+    ]
+
+    def __init__(self):
+        self._content = False
+        self._content_consumed = False
+...
+```
+
+```py
+# Si solo quieres imprimir los métodos de la clase lo puedes hacer con:
+print(dir(response))
+
+# Y veremos todos sus métodos.
+['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+```
